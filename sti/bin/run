@@ -7,5 +7,6 @@
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 #
 # added $MY_JAVA_OPTS for nt variablesinjecting system properties through environment variables
-
+echo "*************noting this invocation******"
+echo $MY_JAVA_OPTS
 exec java $MY_JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /opt/openshift/app.jar $APP_OPTIONS
